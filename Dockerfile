@@ -1,5 +1,5 @@
 #=============================================#
-#                 v.1.3.6                     #  
+#                 v.1.3.7                     #  
 # █▀▀▀█ █  █ █  █ ▄▀▀▄ ▀█▀ █     █▀▄▀█ █▀▀▄   #
 # ▀▀▀▄▄ █  █ █▀▀█ █▄▄█  █  █     █ █ █ █  █   #
 # █▄▄▄█ ▀▄▄▀ █  █ █  █ ▄█▄ █▄▄█  █   █ █▄▄▀   #
@@ -10,14 +10,15 @@
 #    * @author : @SuhailTechInfo
 #    * @youtube : https://www.youtube.com/SuhailTechInfo
 #    * @description : Suhail-Md ,A Multi-functional whatsapp bot md.
-#    * @version 1.3.5
+#    * @version 1.3.7
 
 
  
 
 FROM quay.io/suhailtechinfo/suhail-v2
-RUN git clone https://github.com/SuhailTechInfo/Suhail-Md /root/smd
-WORKDIR /root/smd
+RUN git clone https://github.com/SuhailTechInfo/Suhail-Md-V1 /root/smdd
+RUN rm -rf /root/smdd/.git
+WORKDIR /root/smdd
 RUN npm install
 EXPOSE 8000
 CMD ["npm","start" ] 
